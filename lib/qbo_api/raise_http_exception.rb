@@ -61,7 +61,7 @@ module FaradayMiddleware
           'error_message': error['Message'] || error['message'],
           'error_detail': error['Detail'] || error['detail']
         }
-      end
+      end.to_json
     end
 
     def parse_xml(body)
