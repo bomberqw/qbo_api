@@ -52,9 +52,6 @@ module FaradayMiddleware
 
     def parse_json(body)
       res = ::JSON.parse(body)
-      p '_____________________________'
-      p res
-      p '_____________________________'
       fault = res['Fault'] || res['fault']
       errors = fault['Error'] || fault['error']
       errors.collect do |error|
